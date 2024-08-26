@@ -35,6 +35,4 @@ data = pd.read_csv(file_path, delimiter=';')
 st.markdown("## Amostra dos Dados de Infraestrutura (SP e PR)")
 st.dataframe(data.head(10))
 
-# Rodar a aplicação
-if __name__ == "__main__":
-    st.run()
+
