@@ -27,7 +27,7 @@ st.markdown("""
 """)
 
 # Caminho relativo do arquivo CSV
-file_path = os.path.join('data', '01_raw', 'infra_SP_PR.csv')
+file_path = os.path.join('data', '01_raw', 'infraestrutura_SP_PR.csv')
 
 # Lendo o arquivo CSV com delimitador ;
 data = pd.read_csv(file_path, delimiter=';')
