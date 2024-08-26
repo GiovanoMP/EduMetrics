@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 
 # Título do projeto
 st.title("EduMetrics: Análise da Qualidade da Educação")
@@ -25,9 +26,11 @@ st.markdown("""
 - [Artigo sobre Project Charter](https://artia.com/blog/project-charter/)
 """)
 
-# Carregar e exibir uma amostra dos dados de infraestrutura para as escolas do estado de São Paulo e Paraná
-file_path = "data/01_raw/infraestrutura_SP_PR.csv"
-data = pd.read_csv(file_path)
+# Caminho relativo do arquivo CSV
+file_path = os.path.join('data', '01_raw', 'infra_SP_PR.csv')
+
+# Lendo o arquivo CSV com delimitador ;
+data = pd.read_csv(file_path, delimiter=';')
 
 st.markdown("## Amostra dos Dados de Infraestrutura (SP e PR)")
 st.dataframe(data.head(10))
